@@ -9,7 +9,7 @@ from scrapy.http import Request
 MIN_PRICE = 1000
 
 # Max price is 30000$
-MAX_PRICE = 1200
+MAX_PRICE = 3000000
 
 # LIMIT
 LIMIT = 100

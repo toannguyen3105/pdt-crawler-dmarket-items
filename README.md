@@ -19,6 +19,7 @@ Before you continue, ensure you meet the following requirements:
 
 > scrapy crawl items -O items.csv
 
+- If you want to update price filter, let open items.py file and update MIN_PRICE, MAX_PRICE variables.
 ## Donate
 
 Liked some of my work? Buy me a coffee (or more likely a beer)
