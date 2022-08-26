@@ -52,14 +52,14 @@ class ItemsSpider(scrapy.Spider):
                 callback=self.parse,
             )
 
-        def close(self, reason):
-            csv_file = max(glob.iglob('*csv'), key=os.path.getctime)
+    def close(self, reason):
+        csv_file = max(glob.iglob('*csv'), key=os.path.getctime)
 
-            wb = Workbook()
-            ws = wb.active
+        wb = Workbook()
+        ws = wb.active
 
-            with open(csv_file, 'r', encoding='utf-8') as f:
-                for row in csv.reader(f):
-                    ws.append(row)
+        with open(csv_file, 'r', encoding='utf-8') as f:
+            for row in csv.reader(f):
+                ws.append(row)
 
-            wb.save(csv_file.replace('.csv', '') + '.xlsx')
+        wb.save(csv_file.replace('.csv', '') + '.xlsx')
